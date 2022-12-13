@@ -54,3 +54,7 @@ Z racji tego, że klasa `Dollar` oraz `Franc` zawiera tylko i wyłącznie konstr
 
 ## Dodawanie - ostatecznie
 
+Robimy wstępną przymiarkę pod dodawanie różnych walut według przelicznika. Tworzymy interfejs `Expression`, który stanowi reprezentację działań na walutach. Klasa `Money` implementuje ten interfejs. Tworzymy atrapę banku, z preparowaną wartością zwrotną tylko po to by zaliczyć test. Test testuje działanie 5$ + 5$ przy wykorzystaniu wcześniej wymienionych klas i interfejsów. 
+
+## Zróbmy to (*Make It*)
+
