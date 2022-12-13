@@ -1,6 +1,6 @@
 # TDD by Kent Beck
 
-Przykłady z książki "TDD. Sztuka tworzenia dobrego kodu" Kenta becka. 
+Przykłady z książki "TDD. Sztuka tworzenia dobrego kodu" Kenta Becka. 
 
 ## Portfel wielowalutowy (*Multi-Currency Money*)
 
@@ -41,4 +41,8 @@ Dopisujemy test, w którym sprawdzamy równość pomiędzy walutami. Test się z
 Klasy `Dollar` i `Franc` zawierają zduplikowany kod i nic nie usprawiedliwia istnienia ich w takiej postaci. Na drodze do ich eliminacji w klasie `Money` tworzymy metody statyczne do tworzenia obiektów klasy `Dollar` oraz `Franc`. Następnie refaktoryzujemy testy, aby mogły korzystać z tej zmiany. 
 
 ## Mnożenie rozdwojone (*Times We're Livin' In*)
+
+Usuwamy zduplikowany kod ostatecznie doprowadzając do tego, że `Money` staje się Fabryką dla podklas. Podklasy stają się jedynie szablonami dla walut. Cała logika znajduje się w `Money`.
+
+## Mnożenie jednolite (*Interesting Times*)
 
