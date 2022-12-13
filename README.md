@@ -46,3 +46,7 @@ Usuwamy zduplikowany kod ostatecznie doprowadzając do tego, że `Money` staje s
 
 ## Mnożenie jednolite (*Interesting Times*)
 
+W podklasach poza konstruktorami została jeszcze metoda `times()`. Ta metoda w obu klasach jest do siebie bardzo podobna, różni się tylko jednym szczegółem (walutą). Dlatego odwołujemy się do „zmiennej instancyjnej” (pola `currency` klasy `Money`) i zwracamy nowy obiekt klasy Money (likwidując abstrakcyjność tej klasy). Niestety testy nie przechodzą, bo wywołując metodę `equals()` porównujemy ze sobą instance klas, co w tym przypadku jest bez sensu. Zmieniamy metodę `equals()` porównując ze sobą ilość i walutę klas. To pozwala nam na ujednolicenie metody `times()`między podklasami i przeniesienie jej do superklasy. 
+
+## Korzenie wszelkiego zła (*The Root of All Evil*)
+
