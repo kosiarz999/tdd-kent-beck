@@ -73,3 +73,9 @@ W klasie `Money` modyfikujemy zwracany obiekt tak, by uwzględniał pobrany z ba
 ## Mieszany koszyk walutowy (*Mixed Currencies*)
 
 Nowy test sprawdzający dodawanie różnych walut zmusił nas do przeprowadzenia refaktoryzacji. Dodaliśmy metodę `plus()` do interfejsu `Expression`, a to pociągnęło za sobą dodatkowe zmiany w już istniejącym kodzie. Przede wszystkim w klasie `Sum` w metodzie `reduce()` odwołaliśmy się do metody `reduce()` klasy `Money`. Dalsze zmiany z reguły polegały na odwoływaniu się do interfejsu. 
+
+## Abstrakcja - ostatecznie (*Abstraction, Finally*)
+
+W pierwszej kolejności piszemy test, który testuje dodanie obiektu `Sum` oraz `Money`. Dopisujemy metodę `plus()` do klasy `Sum`.  
+Następnie piszemy test, który testuje mnożenie obiektu `Sum`. Dopisujemy metodę `times()` do klasy `Sum` i przenosimy metodę wyżej do interfejsu. 
+
