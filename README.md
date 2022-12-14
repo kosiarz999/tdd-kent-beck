@@ -70,3 +70,6 @@ Wymieniona tablica składa się z obiektów klasy `Pair`.
 W klasie `Bank` dopisujemy metody, które dodają i pobierają przeliczniki walut.  
 W klasie `Money` modyfikujemy zwracany obiekt tak, by uwzględniał pobrany z banku przelicznik.
 
+## Mieszany koszyk walutowy (*Mixed Currencies*)
+
+Nowy test sprawdzający dodawanie różnych walut zmusił nas do przeprowadzenia refaktoryzacji. Dodaliśmy metodę `plus()` do interfejsu `Expression`, a to pociągnęło za sobą dodatkowe zmiany w już istniejącym kodzie. Przede wszystkim w klasie `Sum` w metodzie `reduce()` odwołaliśmy się do metody `reduce()` klasy `Money`. Dalsze zmiany z reguły polegały na odwoływaniu się do interfejsu. 

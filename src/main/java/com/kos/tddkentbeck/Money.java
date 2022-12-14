@@ -14,10 +14,9 @@ public class Money implements Expression {
         return this.currency;
     }
 
-    public Money times(int multiplier) {
+    public Expression times(int multiplier) {
         return new Money(amount * multiplier, this.currency);
     }
-
 
     static Money dollar(int amount) {
         return new Money(amount, "USD");
@@ -27,7 +26,7 @@ public class Money implements Expression {
         return new Money(amount, "CHF");
     }
 
-    public Expression plus(Money addend) {
+    public Expression plus(Expression addend) {
         return new Sum(this, addend);
     }
 
