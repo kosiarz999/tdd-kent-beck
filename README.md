@@ -65,3 +65,8 @@ Poza tym dopisujemy szereg testów testujących wszystkie etapy po drodze.
 
 ## Wymiana (*Change*)
 
+Ten rozdział skupia się na dołączeniu do rozwiązania przelicznika walut, który będzie przechowywany w haszowanej tablicy mapujacej w klasie `Bank`. Dlatego działania redukcyjne na walutach powinny przekazywać obiekt klasy `Bank`.  
+Wymieniona tablica składa się z obiektów klasy `Pair`.  
+W klasie `Bank` dopisujemy metody, które dodają i pobierają przeliczniki walut.  
+W klasie `Money` modyfikujemy zwracany obiekt tak, by uwzględniał pobrany z banku przelicznik.
+

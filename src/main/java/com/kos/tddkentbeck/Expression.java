@@ -1,5 +1,5 @@
 package com.kos.tddkentbeck;
 
 public interface Expression {
-    Money reduce(String to);
+    Money reduce(Bank bank, String to);
 }
